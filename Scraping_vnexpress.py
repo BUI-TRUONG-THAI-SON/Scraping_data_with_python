@@ -1,8 +1,6 @@
 import json
 import requests
 from bs4 import BeautifulSoup
-base_url = 'https://vnexpress.net/phap-luat/ho-so-pha-an-p'
-baibao_list = []
 def extract_text(soup, selector):
     # ham nay dung de kiem tra xem có attribute như yêu cầu trích xuất không
     try: 
@@ -50,6 +48,8 @@ def scraping_page(duong_dan, order, page_number):
         an_article(url, order, page_number)
         order+=1
     return True
+base_url = 'https://vnexpress.net/phap-luat/ho-so-pha-an-p'
+baibao_list = []
 page_number = 1
 order = 1
 while True:
