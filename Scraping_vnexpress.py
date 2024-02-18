@@ -30,7 +30,7 @@ def an_article(url, order, page_number):
     }
     baibao_list.append(baibao_data)
 def scraping_page(duong_dan, order, page_number):
-    # lay url cua trang thu page_number
+    # lấy đường dẫn của trang thứ page_number
     website = requests.get(f'{duong_dan}').text
     soup = BeautifulSoup(website, 'lxml')
     # xử lý bài báo hot đầu tiên
